@@ -10,6 +10,18 @@ using namespace std;
 
 
 signed main(){
-  
+  string s;
+  cin>>s;
+
+  int c = 1;
+  int m = 1;
+  for(signed i = 1; i < s.size(); ++i){
+    if(s[i-1] == s[i])
+      c++;
+    else c = 1;
+
+    m = max(c, m);
+  }
+  cout<<m<<endl;
   return 0;
 }
